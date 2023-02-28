@@ -1,0 +1,31 @@
+//Create a simple program using Java to calculate the 15% tip on a restaurant bill
+
+
+import java.util.Scanner;
+import java.text.*;
+
+public class  restaurantBill
+{
+	public static void main(String[] args)
+	{
+	    //Variables and Constants
+		final float CONVERSION_FACTOR1=0.15f;	
+		float outputPrice;
+
+ 		// create a scanner so we can read the command-line input
+        Scanner scanner = new Scanner(System.in);
+
+        //prompt for the meal's cost
+        System.out.print("Please enter a meal's cost: ");
+        // get it input as a Float
+        float inputPrice = scanner.nextFloat();
+
+        //System.out.println( inputPrice);
+        outputPrice = (CONVERSION_FACTOR1*inputPrice);
+        
+		System.out.print("Amount to tip is: $");
+		
+        DecimalFormat df = new DecimalFormat("0.00");
+        System.out.println(df.format(outputPrice));       
+	}
+}
